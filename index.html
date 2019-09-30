@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" />
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <section class="App text-center">
+        <div class="container">
+            <form name="App">
+                <div class="form-group">
+                    <label for="arabic">إسم الطالب:</label>
+                    <input type="text" class="form-control " id="exampleInputEmail1" aria-describedby="emailHelp"
+                        placeholder="العلامة" name="sn">
+                </div>
+
+                <div class="form-group">
+                    <label for="arabic">التربية الدينية</label>
+                    <input type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                        placeholder="العلامة" name="num1">
+                </div>
+                <div class="form-group">
+                    <label for="math">اللغة العربية</label>
+                    <input type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                        placeholder="العلامة" name="num2">
+                </div>
+                <div class="form-group">
+                    <label for="english">اللغة الإنجليزية</label>
+                    <input type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                        placeholder="العلامة" name="num3">
+                </div>
+                <div class="form-group">
+                    <label for="religon">الرياضيات</label>
+                    <input type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                        placeholder="العلامة" name="num4">
+                </div>
+                <div class="form-group">
+                    <label for="sub2">العلوم العامة</label>
+                    <input type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                        placeholder="العلامة" name="num5">
+                </div>
+                <div class="form-group">
+                    <label for="sub3">المواد الإجتماعية</label>
+                    <input type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                        placeholder="العلامة" name="num6">
+                </div>
+                <div class="form-group">
+                    <label for="sub4">التكنولوجيا و الحاسوب</label>
+                    <input type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                        placeholder="العلامة" name="num7">
+                </div>
+                <div class="form-group">
+                    <label for="sub6">الفنون و الحرف</label>
+                    <input type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                        placeholder="العلامة" name="num8">
+                </div>
+
+                <button type="button" onclick="result()" class="btn btn-primary">Submit</button>
+
+
+                <div class="form-groug Result">
+                    <label for="Res">إسم الطالب</label>
+
+                    <div class="input-group mb-3">
+                        <input type="text" class="student-name" class="form-control" READONLY>
+                        <div class="input-group-append">
+                            <span class="input-group-text"><i class="fas fa-user"></i></span>
+                        </div>
+                    </div>
+
+                    <label for="Res">المجموع</label>
+
+                    <div class="input-group mb-3">
+                        <input type="text" class="result-mark" class="form-control" READONLY>
+                        <div class="input-group-append">
+                            <span class="input-group-text rate-icon">%</span>
+                        </div>
+                    </div>
+
+                    <label for="Res">التقييم</label>
+
+                    <div class="input-group mb-3">
+                        <input type="text" class="result-rate" class="form-control" READONLY>
+                        <div class="input-group-append">
+                            <span class="input-group-text">↕</span>
+                        </div>
+                    </div>
+
+
+                </div>
+
+            </form>
+        </div>
+    </section>
+
+
+</body>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+
+<script>
+    function result() {
+        var sn = (document.App.sn.value);
+        var sm1 = (document.App.num1.value);
+        var sm2 = (document.App.num2.value);
+        var sm3 = (document.App.num3.value);
+        var sm4 = (document.App.num4.value);
+        var sm5 = (document.App.num5.value);
+        var sm6 = (document.App.num6.value);
+        var sm7 = (document.App.num7.value);
+        var sm8 = (document.App.num8.value);
+        var result = sm1 + sm2 + sm3 + sm4 + sm5 + sm6 + sm7 + sm8 / 800 * 1000;
+        var mystring = result.substring(0, 2);
+
+        document.querySelector(".student-name").value = sn;
+
+        document.querySelector(".result-mark").value = mystring.trim();
+
+
+        if (mystring.trim() == 95 || mystring.trim() > 95) {
+            document.querySelector(".result-rate").value = "متميز"
+        } else if (mystring.trim() < 95 && mystring.trim() >= 85) {
+            document.querySelector(".result-rate").value = "ممتاز"
+        } else if (mystring.trim() < 85 && mystring.trim() >= 75) {
+            document.querySelector(".result-rate").value = "جيد جداً"
+        } else if (mystring.trim() < 75 && mystring.trim() >= 65) {
+            document.querySelector(".result-rate").value = "جيد"
+        } else {
+            document.querySelector(".result-rate").value = "راسب"
+        }
+
+
+
+
+
+    }
+</script>
+
+</html>
